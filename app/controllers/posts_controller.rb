@@ -45,6 +45,7 @@ class PostsController < ApplicationController
     render :new if @post.invalid?
   end
 
+  
   private
 
   def post_params
