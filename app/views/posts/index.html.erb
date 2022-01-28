@@ -1,18 +1,18 @@
-<h1>つぶやき一覧</h1>
 <p><%= notice %></p>
 
-<table>
-  <tr>
-    <th>内容</th>
-  </tr>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.content %></td>
-    <td><%= link_to "編集する", edit_post_path(post.id) %></td>
-    <td><%= link_to '削除する', post_path(post.id), method: :delete %></td>
-  </tr>
-<% end %>
+<% @posts.reverse.each do |post| %>
+  <table class="main">
+    <tr>
+      <th><%= post.content %></th>
+    </tr>
+    <tr class="time">
+      <td>
+        <%= l post.created_at %>
+        <%= link_to "編集", edit_post_path(post.id) %>
+        <%= link_to '削除', post_path(post.id), method: :delete %>
+      </td>
+    </tr>
 </table>
+<% end %>
 
-<%= link_to '新しくつぶやきを投稿する', new_post_path %>
