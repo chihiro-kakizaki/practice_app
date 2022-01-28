@@ -9,7 +9,16 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="body">
+    <header class="header">
+      <h2 class="app_name">つぶやきアプリ</h2>
+      <ul class="new_menu clearfix">
+        <li><a><%= link_to '▶つぶやきを投稿', new_post_path %></a></li>
+      </ul>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p>chihiro-kakizaki</p>
+    </footer>
   </body>
 </html>
