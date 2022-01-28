@@ -1,15 +1,62 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+.body {
+  width: 800px;
+  margin: 0 auto;
+}
+/*header部分*/
+.header  {
+  height: 80px;
+  background-color: #97cdf3;
+}
+h2.app_name {
+  float: left;
+  margin: 20px;
+  color: white;
+}
+.new_menu li {
+  float: right;
+  margin: 30px;
+  list-style: none;
+}
+.new_menu li a {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/*つぶやき部分*/
+.main {
+  width: 800px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #e6f0f0;
+  border: 2px #97cdf3 solid;
+}
+.main .time {
+  text-align: center;
+}
+
+/*footer部分*/
+.footer  {
+  width: 100%;
+  height: 60px;
+  background-color: #97cdf3;
+  display: table;
+}
+.footer p {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/*edit.new.confirmの文字中央よせ*/
+.message {
+  margin :80px ;
+  text-align: center;
+}
+
+/*投稿一覧へ戻るボタンを右寄せ*/
+.info {
+  text-align:right;
+}
